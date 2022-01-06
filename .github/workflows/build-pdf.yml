@@ -26,7 +26,11 @@ jobs:
           image_import: ./images
           # Default is true, can set to false to only get PDF files
           build_html: false
-      - uses: actions/upload-artifact@v1
+      - uses: EndBug/add-and-commit@v7
         with:
-          name: docs
-          path: pdfs
+          # This "special" author name and email will show up as the GH Actions user/bot in the UI
+          author_name: github-actions
+          author_email: 41898282+github-actions[bot]@users.noreply.github.com
+          message: 'Automatically render .pdf files'
+          add: "${{ steps.render.outputs.rendered-files }}"
+        if: "${{ steps.render.outputs.rendered-files != ''}}"
