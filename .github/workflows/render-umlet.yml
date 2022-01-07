@@ -1,0 +1,22 @@
+name: Render draw.io files
+
+on: [push]
+
+jobs:
+  render_drawio:
+    runs-on: ubuntu-latest
+    name: Render draw.io files
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Install Umlet
+      run: apt get install umlet
+    - name: render files
+      run: 'umlet -action=convert -format=png -filename=test.uxf'
+    - uses: EndBug/add-and-commit@v7
+      with:
+        # This "special" author name and email will show up as the GH Actions user/bot in the UI
+        author_name: github-actions
+        author_email: 41898282+github-actions[bot]@users.noreply.github.com
+        message: 'Automatically render .drawio files'
+        add: "."
