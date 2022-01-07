@@ -3,7 +3,7 @@ name: Render umlet files
 on: [push]
 
 jobs:
-  render_drawio:
+  render_umlet:
     runs-on: ubuntu-latest
     name: Render umlet files
     steps:
