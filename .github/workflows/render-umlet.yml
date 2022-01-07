@@ -10,7 +10,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
     - name: Install Umlet
-      run: apt-get install umlet
+      run: sudo apt-get install umlet
     - name: render files
       run: 'umlet -action=convert -format=png -filename=test.uxf'
     - uses: EndBug/add-and-commit@v7
