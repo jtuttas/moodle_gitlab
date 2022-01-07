@@ -12,7 +12,7 @@ jobs:
     - name: Install Umlet
       run: sudo apt-get install umlet
     - name: render files
-      run: 'find . -name "*.uxf" -not -path '*/.*' | while read file;do umlet -action=convert -format=svg -filename=$file; done'
+      run: './render_umlet.sh'
     - uses: EndBug/add-and-commit@v7
       with:
         # This "special" author name and email will show up as the GH Actions user/bot in the UI
