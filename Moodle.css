@@ -1,7 +1,9 @@
-body {
-    background-color: aqua;
-}
+
 
 h1 {
-    background-color: blueviolet;
+    color: darkslateblue;
+    font-size: 4em;
+      border-radius: 25px;
+  background: #73AD21;
+  padding: 20px;
 }
