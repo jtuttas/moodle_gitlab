@@ -2,3 +2,4 @@ site_name: MyTest
 
 nav:
     - Home: bsp.md
+    - Formelsammlung: formelsammlung.md
