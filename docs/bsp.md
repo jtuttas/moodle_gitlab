@@ -3,13 +3,7 @@ Hier eine Beispielseite mit einem eingebetteten Bild.
 
 ![bild](./images/img.png)
 
-@startuml
-Alice -> Bob: Authentication Request
-Bob --> Alice: Authentication Response
-
-Alice -> Bob: Another authentication Request
-Alice <-- Bob: another authentication Response
-@enduml
+![Class Diagram](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/Zingam/Markdown-Document-UML-Use-Test/master/UML/Instance.puml)
 
 ## Code einbauen!
 
