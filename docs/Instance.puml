@@ -1,13 +1,20 @@
 @startuml
 
-Instance <|-- VulkanRootObject
+Person <|-- Student
 
-class Instance {
-    -- Contructors & destructors --
-    - Instance()
+class Person {
+    - name: String
     
-    -- Public methods --
-    + Initialize() : bool
+    
+    + Person(n:String)
+    + getName():String
+}
+
+class Student {
+    - matrnr: int
+
+    + Student(m:int,n:String)
+    + getMatrNr():int
 }
 
 @enduml
