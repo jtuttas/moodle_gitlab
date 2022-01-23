@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>550</x>
+      <y>270</y>
+      <w>340</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>Tier
+--
+- name:string
+- gewicht:double
+--
++ Tier(name:string)
++ getName():string
++ setGewicht(gewicht:double):void
++ getGewicht():double
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

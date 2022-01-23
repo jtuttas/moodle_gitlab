@@ -1,5 +1,11 @@
+# Klassen Code und Diagramm
 
 
+
+## untereinander
+![Class Diagram] (./tier.uxf.svg)
+
+```java
 public class Tier {
     private String name;
     private double gewicht;
@@ -18,3 +24,7 @@ public class Tier {
         this.gewicht=gewicht;
     }
 }
+```
+## nebeneinander 
+
+wie ?
