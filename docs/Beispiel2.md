@@ -3,7 +3,8 @@
 ![bild](./images/img.png)
 
 ## untereinander
-![Class Diagram] (./tier.uxf.svg)
+
+![Class Diagramm](./tier.uxf.svg)
 
 ```java
 public class Tier {
