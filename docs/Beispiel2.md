@@ -4,7 +4,9 @@
 
 ## untereinander
 
-![Class Diagramm](./tier.uxf.svg)
+![Test Demo](images/tier.uxf.svg)
+
+![Class Diagram] (./tier.uxf.svg)
 
 ```java
 public class Tier {
@@ -27,5 +29,14 @@ public class Tier {
 }
 ```
 ## nebeneinander 
+<img style="float: left;" src="images/tier.uxf.svg">
 
-wie ?
+Hier geht es weiter mit MD !
+<br clear="left"/>
+
+
+## Weiter im Text!
+
+
+
+
