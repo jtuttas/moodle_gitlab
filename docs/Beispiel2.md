@@ -4,9 +4,8 @@
 
 ## untereinander
 
-![Test Demo](images/tier.uxf.svg)
+![Test Demo](./images/tier.uxf.svg)
 
-![Class Diagram] (./tier.uxf.svg)
 
 ```java
 public class Tier {
