@@ -1,7 +1,5 @@
 # Klassen Code und Diagramm
 
-![bild](./images/img.png)
-
 ## untereinander
 
 ![Test Demo](./images/tier.uxf.svg)
