@@ -28,7 +28,7 @@ public class Tier {
 }
 ```
 ## nebeneinander 
-<img style="float: left;" src="images/tier.uxf.svg">
+<img style="float: left;" src="./images/tier.uxf.svg">
 
 Hier geht es weiter mit MD !
 <br clear="left"/>
