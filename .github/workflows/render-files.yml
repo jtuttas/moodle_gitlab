@@ -80,6 +80,8 @@ jobs:
     needs: converttopdf 
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v2
       - name: Cache files 
         uses: actions/cache@v2
         env:
