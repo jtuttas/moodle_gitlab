@@ -40,6 +40,8 @@ jobs:
       with:
         path: ~/
         key: $build-${{ env.cache-name }}
+    - name: list files
+      run: 'ls -laR'
     - name: Install Umlet
       run: sudo apt-get install umlet
     - name: render files
