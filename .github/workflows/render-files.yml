@@ -23,7 +23,7 @@ jobs:
       env:
         cache-name: cache-files
       with:
-        path: ~/
+        path: ~/docs
         key: $build-${{ env.cache-name }}
     - name: List the rendered files
       run: 'ls -l ${{ steps.render.outputs.rendered-files }}'
@@ -38,8 +38,10 @@ jobs:
       env:
         cache-name: cache-files
       with:
-        path: ~/
+        path: ~/docs
         key: $build-${{ env.cache-name }}
+        restore-keys: |
+          $build-${{ env.cache-name }}    
     - name: list files
       run: 'ls -laR'
     - name: Install Umlet
