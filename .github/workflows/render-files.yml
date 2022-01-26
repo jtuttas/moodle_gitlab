@@ -51,7 +51,7 @@ jobs:
     - name: Install Umlet
       run: sudo apt-get install umlet
     - name: render files
-      run: 'sh ./.github/workflows/render_umlet.sh'
+      run: 'sh ./config/render_umlet.sh'
 
   converttopdf:
     name: Build PDF
