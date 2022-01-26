@@ -29,8 +29,8 @@ nav:
 ## Beispiele
 
 - [pdf ](https://github.com/jtuttas/moodle_gitlab/raw/master/pdfs/bsp.pdf)
-- [github pages](https://jtuttas.github.io/moodle_gitlab/site/bsp/index.html)
-- [mkdocs](https://link)
+- [github pages](https://jtuttas.github.io/moodle_gitlab/docs/bsp.html)
+- [mkdocs](https://jtuttas.github.io/moodle_gitlab/site/bsp/index.html)
 
 
 ## Moodle Kurs mit weiteren Ideen
