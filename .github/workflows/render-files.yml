@@ -50,6 +50,7 @@ jobs:
 
   converttopdf:
     name: Build PDF
+    needs: [render_drawio, render_umlet]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -72,6 +73,7 @@ jobs:
 
   build:
     name: mkdocs
+    needs: [render_drawio, render_umlet]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout main
@@ -90,4 +92,3 @@ jobs:
           author_email: 41898282+github-actions[bot]@users.noreply.github.com
           message: 'Automatically render mkdocs files'
           add: "."
-          
