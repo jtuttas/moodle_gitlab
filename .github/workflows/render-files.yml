@@ -23,7 +23,7 @@ jobs:
       env:
         cache-name: cache-files
       with:
-        path: ~/.
+        path: ~/
         key: $build-${{ env.cache-name }}
     - name: List the rendered files
       run: 'ls -l ${{ steps.render.outputs.rendered-files }}'
@@ -38,7 +38,7 @@ jobs:
       env:
         cache-name: cache-files
       with:
-        path: ~/.
+        path: ~/
         key: $build-${{ env.cache-name }}
     - name: Install Umlet
       run: sudo apt-get install umlet
@@ -55,7 +55,7 @@ jobs:
         env:
           cache-name: cache-files
         with:
-          path: ~/.
+          path: ~/
           key: $build-${{ env.cache-name }}
       - uses: baileyjm02/markdown-to-pdf@v1
         with:
@@ -67,7 +67,7 @@ jobs:
           # Default is true, can set to false to only get PDF files
           build_html: false
 
-  mkdocs:
+  render-mk-docs:
     name: mkdocs
     needs: converttopdf 
     runs-on: ubuntu-latest
@@ -77,7 +77,7 @@ jobs:
         env:
           cache-name: cache-files
         with:
-          path: ~/.
+          path: ~/
           key: $build-${{ env.cache-name }}
       - name: list files
         run: 'ls -laR'
