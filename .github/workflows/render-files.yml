@@ -41,7 +41,7 @@ jobs:
         path: ~/
         key: $build-${{ env.cache-name }}
         restore-keys: |
-          $build-${{ env.cache-name }}    
+          {{ env.cache-name }}
     - name: list files
       run: 'ls -laR'
     - name: Install Umlet
