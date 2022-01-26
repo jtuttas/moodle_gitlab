@@ -23,7 +23,7 @@ jobs:
       env:
         cache-name: cache-files
       with:
-        path: ~/
+        path: ./*
         key: $build-${{ env.cache-name }}
     - name: List the rendered files
       run: 'ls -l ${{ steps.render.outputs.rendered-files }}'
@@ -38,10 +38,9 @@ jobs:
       env:
         cache-name: cache-files
       with:
-        path: ~/
+        path: ./*
         key: $build2-${{ env.cache-name }}
         restore-keys: |
-          ${{ env.cache-name }}
           $build-${{ env.cache-name }}
     - name: list files
       run: 'ls -laR'
@@ -60,10 +59,12 @@ jobs:
         env:
           cache-name: cache-files
         with:
-          path: ~/
-          key: $build-${{ env.cache-name }}
+          path: ./*
+          key: $build3-${{ env.cache-name }}
           restore-keys: |
-            $build-${{ env.cache-name }}    
+            $build2-${{ env.cache-name }}    
+      - name: list files
+        run: 'ls -laR'
       - uses: baileyjm02/markdown-to-pdf@v1
         with:
           input_dir: docs
@@ -84,10 +85,10 @@ jobs:
         env:
           cache-name: cache-files
         with:
-          path: ~/
-          key: $build-${{ env.cache-name }}
+          path: ./*
+          key: $build4-${{ env.cache-name }}
           restore-keys: |
-            $build-${{ env.cache-name }}    
+            $build3-${{ env.cache-name }}    
       - name: list files
         run: 'ls -laR'
       - name: Deploy docs
