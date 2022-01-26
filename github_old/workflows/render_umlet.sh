@@ -1,1 +1,0 @@
-find . -name "*.uxf" -not -path '*/.*' | while read file;do umlet -action=convert -format=svg -filename=$file; done

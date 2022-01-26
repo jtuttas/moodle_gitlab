@@ -26,6 +26,7 @@ jobs:
         path: | 
           ./docs
           ./config
+          ./pdfs
         key: $build-${{ env.cache-name }}
     - name: List the rendered files
       run: 'ls -l ${{ steps.render.outputs.rendered-files }}'
@@ -43,6 +44,7 @@ jobs:
         path: | 
           ./docs
           ./config
+          ./pdfs          
         key: $build2-${{ env.cache-name }}
         restore-keys: |
           $build-${{ env.cache-name }}
@@ -66,6 +68,7 @@ jobs:
           path: | 
             ./docs
             ./config
+            ./pdfs
           key: $build3-${{ env.cache-name }}
           restore-keys: |
             $build2-${{ env.cache-name }}    
@@ -96,6 +99,8 @@ jobs:
           path: | 
             ./docs
             ./config
+            ./pdfs
+            
           key: $build4-${{ env.cache-name }}
           restore-keys: |
             $build3-${{ env.cache-name }}            
