@@ -1,0 +1,89 @@
+name: Render files
+
+on: [push]
+
+jobs:
+  render_drawio:
+    runs-on: ubuntu-latest
+    name: Render draw.io files
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Cache Files
+      uses: actions/cache@v2
+      env:
+        cache-name: mycache
+      with:
+        path: ~/
+        key: $mykey
+    - name: Render draw.io files
+      uses: docker://ghcr.io/racklet/render-drawio-action:v1.0.3
+      id: render
+      with: # Showcasing the default values here
+        formats: 'svg'
+        sub-dirs: '.'
+        skip-dirs: '.git'
+        # files: '' # unset, specify "dest-file:src-file" mappings here
+        log-level: 'info'
+    - name: List the rendered files
+      run: 'ls -l ${{ steps.render.outputs.rendered-files }}'
+
+
+  render_umlet:
+    runs-on: ubuntu-latest
+    name: Render umlet files
+    steps:
+    - name: Cache Primes
+      id: cache-primes
+      uses: actions/cache@v2
+      with:
+        path: ~/
+        key: $mykey
+    - name: Install Umlet
+      run: sudo apt-get install umlet
+    - name: render files
+      run: 'sh ./.github/workflows/render_umlet.sh'
+
+  converttopdf:
+    name: Build PDF
+    runs-on: ubuntu-latest
+    steps:
+      - name: Cache Primes
+        id: cache-primes
+        uses: actions/cache@v2
+        with:
+          path: ~/
+          key: $mykey
+      - uses: baileyjm02/markdown-to-pdf@v1
+        with:
+          input_dir: docs
+          output_dir: pdfs
+          images_dir: docs/images
+          # for example <img src="./images/file-name.png">
+          image_import: ./images
+          # Default is true, can set to false to only get PDF files
+          build_html: false
+
+  render_mkdocs:
+    name: mkdocs
+    runs-on: ubuntu-latest
+    steps:
+      - name: Cache Primes
+        id: cache-primes
+        uses: actions/cache@v2
+        with:
+          path: ~/
+          key: $mykey
+      - name: Deploy docs
+        uses: mhausenblas/mkdocs-deploy-gh-pages@master
+        # Or use mhausenblas/mkdocs-deploy-gh-pages@nomaterial to build without the mkdocs-material theme
+        env:
+          CONFIG_FILE: mkdocs.yml
+          EXTRA_PACKAGES: build-base
+      - uses: EndBug/add-and-commit@v7
+        with:
+          # This "special" author name and email will show up as the GH Actions user/bot in the UI
+          author_name: github-actions
+          author_email: 41898282+github-actions[bot]@users.noreply.github.com
+          message: 'Automatically render mkdocs files'
+          add: "."

@@ -2,7 +2,7 @@
 
 ## untereinander
 
-![Test Demo](./images/tier.uxf.svg)
+![Test Demo](./tier.uxf.svg)
 
 
 ```java
@@ -26,7 +26,7 @@ public class Tier {
 }
 ```
 ## nebeneinander 
-<img style="float: left;" src="./images/tier.uxf.svg">
+<img style="float: left;" src="./tier.uxf.svg">
 
 Hier geht es weiter mit MD !
 <br clear="left"/>
