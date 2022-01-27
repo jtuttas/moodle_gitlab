@@ -14,10 +14,11 @@ jobs:
       id: render
       with: # Showcasing the default values here
         formats: 'svg'
-        sub-dirs: '.'
+        sub-dirs: 'docs'
         skip-dirs: '.git'
-        # files: '' # unset, specify "dest-file:src-file" mappings here
-        log-level: 'info'
+        # files: '' # unset, specify `dest-file=src-file` mappings here
+        log-level: 'info'      
+
     - name: Cache files 
       uses: actions/cache@v2
       env:
@@ -27,10 +28,12 @@ jobs:
           ./docs
           ./config
           ./pdfs
-        key: $build-${{ env.cache-name }}
+        key: $build-${{ env.cache-name }}-${{ github.event.head_commit.message }}
     - name: List the rendered files
       run: 'ls -l ${{ steps.render.outputs.rendered-files }}'
-
+    - name: MV the rendered files
+      run: 'mv -t ./docs/images ${{ steps.render.outputs.rendered-files }}'
+      
   render_umlet:
     runs-on: ubuntu-latest
     name: Render umlet files
@@ -45,9 +48,9 @@ jobs:
           ./docs
           ./config
           ./pdfs          
-        key: $build2-${{ env.cache-name }}
+        key: $build2-${{ env.cache-name }}-${{ github.event.head_commit.message }}
         restore-keys: |
-          $build-${{ env.cache-name }}
+          $build-${{ env.cache-name }}-${{ github.event.head_commit.message }}
     - name: list files
       run: 'ls -laR'
     - name: Install Umlet
@@ -69,18 +72,18 @@ jobs:
             ./docs
             ./config
             ./pdfs
-          key: $build3-${{ env.cache-name }}
+          key: $build3-${{ env.cache-name }}-${{ github.event.head_commit.message }}
           restore-keys: |
-            $build2-${{ env.cache-name }}    
+            $build2-${{ env.cache-name }}-${{ github.event.head_commit.message }}
       - name: list files
         run: 'ls -laR'
       - uses: baileyjm02/markdown-to-pdf@v1
         with:
           input_dir: docs
           output_dir: pdfs
-          images_dir: docs
+          images_dir: docs/images
           # for example <img src="./images/file-name.png">
-          image_import: ./docs
+          image_import: ./images
           # Default is true, can set to false to only get PDF files
           build_html: false
 
@@ -101,9 +104,9 @@ jobs:
             ./config
             ./pdfs
             
-          key: $build4-${{ env.cache-name }}
+          key: $build4-${{ env.cache-name }}-${{ github.event.head_commit.message }}
           restore-keys: |
-            $build3-${{ env.cache-name }}            
+            $build3-${{ env.cache-name }}-${{ github.event.head_commit.message }}
       - name: list files
         run: 'ls -laR'
       - name: Deploy docs

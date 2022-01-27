@@ -2,15 +2,14 @@
 
 ![bild](./images/img.png)
 
-## untereinander2
+## untereinander3
 
-![Class Diagram](./test.svg)
+![Class Diagram](./images/test.svg)
 
-![Class Diagram](./docs/test.svg)
+![Class Diagram](./docs/images/test.svg)
 
-![Class Diagram](test.svg)
+![Class Diagram](images/test.svg)
 
-![Class Diagram](/docs/test.svg)
 
 
 
