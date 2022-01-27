@@ -4,6 +4,9 @@
 
 ## untereinander
 ![Class Diagram](./test.svg)
+![Class Diagram](./docs/test.svg)
+![Class Diagram](test.svg)
+![Class Diagram](/docs/test.svg)
 
 
 ```java
