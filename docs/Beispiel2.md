@@ -6,10 +6,6 @@
 
 ![Class Diagram](./images/test.svg)
 
-![Class Diagram](images/test.svg)
-
-
-
 
 ```java
 public class Tier {
@@ -35,4 +31,4 @@ public class Tier {
 
  Code | Diagramm 
 | - | -
-|<pre>public class Tier { <br>    private String name;<br>    private double gewicht;<br>    public Tier(String name) <br>    { <br>      this.name=name; <br>    } <br>    public String getName(){ <br>        return name; <br>    } <br>    public double getGewicht(){ <br>      return gewicht; <br>    } <br>    public void setGewicht(double gewicht){ <br>        this.gewicht=gewicht; <br>    } <br>} <br></pre> |![Class Diagram](./images/img.png)
+|<pre>public class Tier { <br>    private String name;<br>    private double gewicht;<br>    public Tier(String name) <br>    { <br>      this.name=name; <br>    } <br>    public String getName(){ <br>        return name; <br>    } <br>    public double getGewicht(){ <br>      return gewicht; <br>    } <br>    public void setGewicht(double gewicht){ <br>        this.gewicht=gewicht; <br>    } <br>} <br></pre> |![Class Diagram](./images/tier.uxf.svg)
