@@ -32,7 +32,7 @@ jobs:
     - name: List the rendered files
       run: 'ls -l ${{ steps.render.outputs.rendered-files }}'
     - name: MV the rendered files
-      run: 'mv -t ./docs/images ${{ steps.render.outputs.rendered-files }}'
+      run: 'mv --backup=numbered -t ./docs/images ${{ steps.render.outputs.rendered-files }}'
       
   render_umlet:
     runs-on: ubuntu-latest
