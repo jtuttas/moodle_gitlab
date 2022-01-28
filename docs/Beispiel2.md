@@ -31,4 +31,24 @@ public class Tier {
 
  Code | Diagramm 
 | - | -
-|<pre>public class Tier { <br>    private String name;<br>    private double gewicht;<br>    public Tier(String name) <br>    { <br>      this.name=name; <br>    } <br>    public String getName(){ <br>        return name; <br>    } <br>    public double getGewicht(){ <br>      return gewicht; <br>    } <br>    public void setGewicht(double gewicht){ <br>        this.gewicht=gewicht; <br>    } <br>} <br></pre> |![Class Diagram](./images/tier.uxf.svg)
+| 
+```java
+public class Tier {
+    private String name;
+    private double gewicht;
+
+    public Tier(String name)
+    {
+        this.name=name;
+    }
+    public String getName(){
+        return name;
+    }
+    public double getGewicht(){
+        return gewicht;
+    }
+    public void setGewicht(double gewicht){
+        this.gewicht=gewicht;
+    }
+}
+ |![Class Diagram](./images/tier.uxf.svg)
