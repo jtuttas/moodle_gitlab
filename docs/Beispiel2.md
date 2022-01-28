@@ -27,11 +27,12 @@ public class Tier {
     }
 }
 ```
+
+
 ## nebeneinander
 
- Code | Diagramm 
-| - | -
-| 
+<img style="float: left;" src="./images/tier.uxf.svg">
+
 ```java
 public class Tier {
     private String name;
@@ -51,4 +52,8 @@ public class Tier {
         this.gewicht=gewicht;
     }
 }
- |![Class Diagram](./images/tier.uxf.svg)
+```
+<br clear="left"/>
+
+
+## Weiter im Text!
