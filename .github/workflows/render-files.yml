@@ -110,7 +110,8 @@ jobs:
       - name: list files
         run: 'ls -laR'
       - name: Deploy docs
-        uses: mhausenblas/mkdocs-deploy-gh-pages@master
+        #uses: mhausenblas/mkdocs-deploy-gh-pages@master
+        uses: mhausenblas/mkdocs-deploy-gh-pages@nomaterial
         # Or use mhausenblas/mkdocs-deploy-gh-pages@nomaterial to build without the mkdocs-material theme
         env:
           CONFIG_FILE: mkdocs.yml

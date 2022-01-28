@@ -1,8 +1,8 @@
 # Moodle & Github/Gitlab
 Dieses Repository realisiert folgende Funktionalität:
 - Markdown Dateien (.md), die sich im Ordner **docs** befinden, werden als pdf Dateien exportiert und finden sich dann im Ordner **pdfs**.
-- Draw.io Grafiken (.drawio) im Ordner **docs** werden gewandelt nach SVG.
-- Umlet Dateien (.uxf) im Ordner **docs** werden gewandelt nach SVG.
+- Draw.io Grafiken (.drawio) im Ordner **docs** werden gewandelt nach SVG und im Ordner **docs/images** abgelegt.
+- Umlet Dateien (.uxf) im Ordner **docs** werden gewandelt nach SVG und im Ordner **docs/images** abgelegt.
 
 - Wenn in Github auch noch *pages* aktiviert wurden, dann werden die Markdown Dateien zusätzlich noch nach html exportiert und können über https://{github Benutzer name}.github.io/{Name des Repositories}/docs/bsp.html abgerufen werden. Wobei bsp.md die zugehörige Markdown Datei ist. Für github Pages muss sich die Datei **_config.yml** im Wurzelverzeichnis des Repositories befinden. Minimal mit folgendem Inhalt:
 
