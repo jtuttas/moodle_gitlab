@@ -1,28 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aufgabe Schleife</title>
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css' crossorigin="anonymous">
 
+    <link rel="preload" href="https://service.joerg-tuttas.de/lib/monaco-editor/dev/vs/editor/editor.main.js"
+        as="script">
+    <link rel="preload" href="https://service.joerg-tuttas.de/lib/monaco-editor/dev/vs/editor/editor.main.nls.de.js"
+        as="script">
 
-    <link rel="preload" href="https://service.joerg-tuttas.de/lib/monaco-editor/dev/vs/editor/editor.main.js" as="script">
-    <link rel="preload" href="https://service.joerg-tuttas.de/lib/monaco-editor/dev/vs/editor/editor.main.nls.de.js" as="script">
-    
 
     <script src="https://service.joerg-tuttas.de/lib/pixijs/pixi.js"></script>
-    
-    <link rel='stylesheet' type='text/css' media='screen' href='https://service.joerg-tuttas.de/js.webpack/javaOnlineEmbedded.css'>
+
+    <link rel='stylesheet' type='text/css' media='screen'
+        href='https://service.joerg-tuttas.de/js.webpack/javaOnlineEmbedded.css'>
     <script src="https://service.joerg-tuttas.de/lib/jquery/jquery-3.3.1.js"></script>
     <script src="https://service.joerg-tuttas.de/lib/markdownit/markdownit.min.js"></script>
     <script src="https://service.joerg-tuttas.de/lib/monaco-editor/dev/vs/loader.js"></script>
     <script src="https://service.joerg-tuttas.de/js/runtimelibrary/graphics/SpriteLibrary.js"></script>
     <script src="https://service.joerg-tuttas.de/lib/howler/howler.core.min.js"></script>
     <script src="https://service.joerg-tuttas.de/lib/p5.js/p5.js"></script>
-    
+
     <script type="module" src="https://service.joerg-tuttas.de/js.webpack/javaOnline-embedded.js"></script>
 </head>
+
 <body>
     <p>Hier steht eine einfache Aufgabe! 5</p>
     <div class="java-online" style="width: 80%; height: 400px; margin-left: 5px" data-java-online="{
@@ -34,12 +39,12 @@
         'withErrorList': true,
         'speed': 'max'
     }">
-    
+
         <script type="text/plain" title="Hauptprogramm.java">
     World w = new World();
     new Quadrat(40, 20, 300);
     </script>
-    
+
         <script type="text/plain" title="Quadrat.java">
     class Quadrat extends Rectangle {
         public Quadrat(double left, double top, double width){
@@ -47,7 +52,7 @@
         }
     }
     </script>
-    
+
         <script type="text/plain" title="Tipp" data-type="hint">
     ## Tipp:
     Tipps werden in einer einfachen Markdown-Syntax 
@@ -61,7 +66,8 @@
     vy = v * Math.sin(w);
     /``` (den / weglassen!)            
     </script>
-    
+
     </div>
 </body>
+
 </html>
