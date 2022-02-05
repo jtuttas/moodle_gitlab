@@ -7,6 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aufgabe Schleife</title>
 
+        <script>
+            window.monacoEditorPath = "https://service.joerg-tuttas.de/lib/monaco-editor/dev/vs";
+        </script>
+
     <link rel="preload" href="https://service.joerg-tuttas.de/lib/monaco-editor/dev/vs/editor/editor.main.js"
         as="script">
     <link rel="preload" href="https://service.joerg-tuttas.de/lib/monaco-editor/dev/vs/editor/editor.main.nls.de.js"
@@ -29,7 +33,7 @@
 
 <body>
     <p>Hier steht eine einfache Aufgabe! 5</p>
-    <div class="java-online" style="width: 80%; height: 400px; margin-left: 5px" data-java-online="{
+    <div class="java-online" style="width: 99%; height: 400px; margin-left: 5px" data-java-online="{
         'id': 'Vererbung_Beispiel_1',  
         'withBottomPanel': true, 
         'withFileList': true,
@@ -52,18 +56,19 @@
     }
     </script>
 
-        <script type="text/plain" title="Tipp" data-type="hint">
+        <script type="text/plain" title="Tipp.md" data-type="hint">
     ## Tipp:
+
     Tipps werden in einer einfachen Markdown-Syntax 
     verfasst, die **Fettschrift** u.ä. ermöglicht, aber
      auch Syntax-Highlighting im Fließtext (``class Quadrat extends Rectangle { }``) 
      und in ganzen Absätzen:
-    /```  (den / weglassen!)
+    ```
     double v = Math.random()*8 + 2; // Betrag der Geschwindigkeit zwischen 2 und 10
     double w = Math.random()*2*Math.PI; // Winkel zwischen 0 und 2*PI
     vx = v * Math.cos(w);
     vy = v * Math.sin(w);
-    /``` (den / weglassen!)            
+    ```
     </script>
 
     </div>
