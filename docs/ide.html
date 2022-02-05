@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aufgabe Schleife</title>
+
+    <link rel="preload" href="../htdocs/lib/monaco-editor/dev/vs/editor/editor.main.js" as="script">
+    <link rel="preload" href="../htdocs/lib/monaco-editor/dev/vs/editor/editor.main.nls.de.js" as="script">
+    
+    <script src="../htdocs/lib/pixijs/pixi.js"></script>
+    
+    <link rel='stylesheet' type='text/css' media='screen' href='../htdocs/js.webpack/javaOnlineEmbedded.css'>
+    <script src="../htdocs/lib/jquery/jquery-3.3.1.js"></script>
+    <script src="../htdocs/lib/markdownit/markdownit.min.js"></script>
+    <script src="../htdocs/lib/monaco-editor/dev/vs/loader.js"></script>
+    <script src="../htdocs/js/runtimelibrary/graphics/SpriteLibrary.js"></script>
+    <script src="../htdocs/lib/howler/howler.core.min.js"></script>
+    <script src="../htdocs/lib/p5.js/p5.js"></script>
+    
+    <script type="module" src="../htdocs/js.webpack/javaOnline-embedded.js"></script>
+</head>
+<body>
+    <p>Hier steht eine einfache Aufgabe!</p>
+    <div class="java-online" style="width: 80%; height: 400px; margin-left: 5px" data-java-online="{
+        'id': 'Vererbung_Beispiel_1',  
+        'withBottomPanel': true, 
+        'withFileList': true,
+        'withPCode': true,
+        'withConsole': true,
+        'withErrorList': true,
+        'speed': 'max'
+    }">
+    
+        <script type="text/plain" title="Hauptprogramm.java">
+    World w = new World();
+    new Quadrat(40, 20, 300);
+    </script>
+    
+        <script type="text/plain" title="Quadrat.java">
+    class Quadrat extends Rectangle {
+        public Quadrat(double left, double top, double width){
+            super(left, top, width, width); 
+        }
+    }
+    </script>
+    
+        <script type="text/plain" title="Tipp" data-type="hint">
+    ## Tipp:
+    Tipps werden in einer einfachen Markdown-Syntax 
+    verfasst, die **Fettschrift** u.ä. ermöglicht, aber
+     auch Syntax-Highlighting im Fließtext (``class Quadrat extends Rectangle { }``) 
+     und in ganzen Absätzen:
+    /```  (den / weglassen!)
+    double v = Math.random()*8 + 2; // Betrag der Geschwindigkeit zwischen 2 und 10
+    double w = Math.random()*2*Math.PI; // Winkel zwischen 0 und 2*PI
+    vx = v * Math.cos(w);
+    vy = v * Math.sin(w);
+    /``` (den / weglassen!)            
+    </script>
+    
+    </div>
+</body>
+</html>
