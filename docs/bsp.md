@@ -5,7 +5,7 @@ Hier eine Beispielseite mit einem eingebetteten Bild.
 
 ![Class Diagram](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/jtuttas/moodle_gitlab/master/docs/Instance.puml)
 
-## Code einbauen!
+## Code einbauen!!
  
 ```java
 /**
