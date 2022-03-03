@@ -1,6 +1,7 @@
 
 
 public class Tier {
+	 // Attribute
     private String name;
     private double gewicht;
 
