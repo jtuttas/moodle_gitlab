@@ -53,6 +53,10 @@ jobs:
           $build-${{ env.cache-name }}-${{ github.event.head_commit.message }}
     - name: list files
       run: 'ls -laR'
+    - name: update
+      run: sudo apt-get update
+    - name: upgrade
+      run: sudo apt-get upgrade
     - name: Install Umlet
       run: sudo apt-get install umlet
     - name: render files
