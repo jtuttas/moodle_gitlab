@@ -1,0 +1,12 @@
+# exposed ports
+ports:
+- port: 8080
+  onOpen: open-preview
+
+vscode:
+  extensions:
+    - hediet.vscode-drawio
+    - PKief.material-icon-theme
+    - redhat.vscode-yaml
+    - donjayamanne.githistory
+    - theumletteam.umlet
