@@ -7,6 +7,14 @@ Hier eine Beispielseite mit einem eingebetteten Bild.
 
 ## Code einbauen!!
  
+
+```mermaid
+classDiagram
+Class01 <|-- AveryLongClass : Cool
+Class03 *-- Class04
+Class05 o-- Class06
+```
+
 ```java
 /**
  * Main
