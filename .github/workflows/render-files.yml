@@ -85,7 +85,7 @@ jobs:
         id: files_list
         run: |
           echo "::set-output name=files::$(printf '"%s" ' docs/*.md)"
-      - uses: docker://pandoc/latex:2.9
+      - uses: docker://pandoc/latex
         with:
           args: --output=pdfs/result.pdf ${{ steps.files_list.outputs.files }}
       - name: list files2
