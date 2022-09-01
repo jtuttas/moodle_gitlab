@@ -18,7 +18,7 @@ $ A \sim B $   bedeutet $ \vert  A \vert =  \vert  B \vert $ | Äquivalenz von M
  $ A = B $   bedeutet $ x \in A \leftrightarrow x \in B $ | Gleichheit von Mengen
 $ A \subseteq B $   bedeutet $ x \in A \rightarrow x \in B $ | Differenzmenge
 
-## UML
+## UML (Meramaid)
 
 ```mermaid
 graph TD;
@@ -27,3 +27,15 @@ graph TD;
     B-->D;
     C-->D;
 ```
+
+## UML (Plant UML)
+
+@startuml
+Object <|-- ArrayList
+
+Object : equals()
+ArrayList : Object[] elementData
+ArrayList : size()
+
+@enduml
+
