@@ -8,12 +8,15 @@ Wir schwitzen im Raum **2.13** !!
 ## Code einbauen!!
  
 
-```mermaid
-classDiagram
-Class01 <|-- AveryLongClass : Cool
-Class03 *-- Class04
-Class05 o-- Class06
-```
+@startuml
+Object <|-- ArrayList
+
+Object : equals()
+ArrayList : Object[] elementData
+ArrayList : size()
+
+@enduml
+
 
 ```java
 /**

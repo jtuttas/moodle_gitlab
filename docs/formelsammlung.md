@@ -1,4 +1,4 @@
-# Mengenlehre 
+# Mengenlehre
 
 ## Darstellungsmöglichkeiten
 
@@ -18,6 +18,12 @@ $ A \sim B $   bedeutet $ \vert  A \vert =  \vert  B \vert $ | Äquivalenz von M
  $ A = B $   bedeutet $ x \in A \leftrightarrow x \in B $ | Gleichheit von Mengen
 $ A \subseteq B $   bedeutet $ x \in A \rightarrow x \in B $ | Differenzmenge
 
+## UML
 
-
-s
+```mermaid
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+```

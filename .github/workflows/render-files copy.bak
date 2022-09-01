@@ -81,20 +81,15 @@ jobs:
             $build2-${{ env.cache-name }}-${{ github.event.head_commit.message }}
       - name: list files
         run: 'ls -laR'
-
-      - name: create file list
-        id: files_list
-        run: |
-          echo "Lorem ipsum" > lorem_1.md  # create two example files
-          echo "dolor sit amet" > lorem_2.md
-          mkdir output  # create output dir
-          # this will also include README.md
-          echo "::set-output name=files::$(printf '"%s" ' *.md)"
-
-      - uses: docker://pandoc/latex:2.9
+      - uses: baileyjm02/markdown-to-pdf@v1
         with:
-          args: --output=output/result.pdf ${{ steps.files_list.outputs.files }}
-        
+          input_dir: docs
+          output_dir: pdfs
+          images_dir: docs/images
+          # for example <img src="./images/file-name.png">
+          image_import: ./images
+          # Default is true, can set to false to only get PDF files
+          build_html: false
 
   render-mk-docs:
     name: mkdocs
