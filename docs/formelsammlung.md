@@ -27,15 +27,3 @@ graph TD;
     B-->D;
     C-->D;
 ```
-
-## UML (Plant UML)
-
-@startuml
-Object <|-- ArrayList
-
-Object : equals()
-ArrayList : Object[] elementData
-ArrayList : size()
-
-@enduml
-
