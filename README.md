@@ -28,8 +28,8 @@ nav:
 
 ## Beispiele
 
-- [pdf ](https://github.com/jtuttas/moodle_gitlab/raw/master/pdfs/bsp.pdf)
-- [github pages](https://jtuttas.github.io/moodle_gitlab/docs/bsp.html)
+- [pdf ](https://github.com/jtuttas/moodle_gitlab/raw/master/pdfs/bsp.md.pdf)
+- [github pages](https://jtuttas.github.io/moodle_gitlab/html/bsp.html)
 - [mkdocs](https://jtuttas.github.io/moodle_gitlab/site/bsp/index.html)
 
 
