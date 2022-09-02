@@ -85,8 +85,8 @@ jobs:
         id: files_list
         run: |
           echo "::set-output name=files::$(printf '"%s" ' docs/*.md)"
-      - name: install pandoc_filter
-        run: sudo apt-get install pandoc
+      - name: install pandoc
+        run: sudo apt-get install pandoc pdflatex; npm install --global mermaid-filter
       - name: run pandoc
         run: cd docs; pandoc -s --mathjax -o doc.pdf formelsammlung.md 
       - name: list files2
