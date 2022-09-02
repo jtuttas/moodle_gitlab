@@ -1,11 +1,10 @@
-# Klassen Code und Diagramm
+# Beispiel markdown
+
+## Ein Bild einfügen
 
 ![bild](./images/img.png)
 
-## untereinander4
-
-![Class Diagram](./images/test.svg)
-
+## Code Einfügen
 
 ```java
 public class Tier {
@@ -28,32 +27,5 @@ public class Tier {
 }
 ```
 
+## LaTex einfügen
 
-## nebeneinander
-
-<img style="float: left;" src="./images/tier.uxf.svg">
-
-```java
-public class Tier {
-    private String name;
-    private double gewicht;
-
-    public Tier(String name)
-    {
-        this.name=name;
-    }
-    public String getName(){
-        return name;
-    }
-    public double getGewicht(){
-        return gewicht;
-    }
-    public void setGewicht(double gewicht){
-        this.gewicht=gewicht;
-    }
-}
-```
-<br clear="left"/>
-
-
-## Weiter im Text!

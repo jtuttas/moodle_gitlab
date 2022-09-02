@@ -86,9 +86,9 @@ jobs:
         run: |
           echo "::set-output name=files::$(printf '"%s" ' docs/*.md)"
       - name: install pandoc
-        run: sudo apt-get update;sudo apt-get install pdflatex; npm install --global mermaid-filter
+        run: sudo apt-get update;sudo apt-get install texlive-latex-base texlive-latex-extra pandoc; npm install --global mermaid-filter
       - name: run pandoc
-        run: cd docs; pandoc -s --mathjax -o doc.pdf formelsammlung.md 
+        run: cd docs; for i in *.md ; do echo "$i" && pandoc --mathjax -F mermaid-filter -s $i -o ../pdfs/$i.pdf || true; pandoc --mathjax -F mermaid-filter -s $i -o ../html/$i.html || true; done 
       - name: list files2
         run: 'ls -laR'        
 
