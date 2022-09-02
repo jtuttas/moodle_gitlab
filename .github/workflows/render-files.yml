@@ -85,9 +85,9 @@ jobs:
         id: files_list
         run: |
           echo "::set-output name=files::$(printf '"%s" ' docs/*.md)"
-      - uses: docker://pandoc/latex
+      - uses: docker:marcelwiget/pandoc-mermaid
         with:
-          args: --output=pdfs/result.pdf ${{ steps.files_list.outputs.files }}
+          args: --filter=pandoc_filter.py --output=pdfs/result.pdf ${{ steps.files_list.outputs.files }}
       - name: list files2
         run: 'ls -laR'        
 
