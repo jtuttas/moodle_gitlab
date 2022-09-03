@@ -24,6 +24,7 @@ public class Main {
 
 ## LaTex Formeln verwenden
 
+
 |Beschreibung| |
 ------ | -----
 $A \sim B$   bedeutet $\vert  A \vert =  \vert  B \vert$ | Äquivalenz von Mengen

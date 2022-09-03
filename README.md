@@ -1,6 +1,7 @@
 # Moodle & Github/Gitlab
 Dieses Repository realisiert folgende Funktionalität:
-- Markdown Dateien (.md), die sich im Ordner **docs** befinden, werden als pdf Dateien exportiert und finden sich dann im Ordner **pdfs**.
+- Markdown Dateien (.md), die sich im Ordner **docs** befinden, werden via pandoc als pdf Dateien exportiert und finden sich dann im Ordner **pdfs** bzw. als html im Ordner **html**. Dazu muss sich im Ordner javascript die Datei *mathjax.js* befinden.
+
 - Draw.io Grafiken (.drawio) im Ordner **docs** werden gewandelt nach SVG und im Ordner **docs/images** abgelegt.
 - Umlet Dateien (.uxf) im Ordner **docs** werden gewandelt nach SVG und im Ordner **docs/images** abgelegt.
 
