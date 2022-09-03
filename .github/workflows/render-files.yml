@@ -28,6 +28,7 @@ jobs:
           ./docs
           ./config
           ./pdfs
+          ./html
         key: $build-${{ env.cache-name }}-${{ github.event.head_commit.message }}
     - name: List the rendered files
       run: 'ls -l ${{ steps.render.outputs.rendered-files }}'
@@ -47,7 +48,8 @@ jobs:
         path: | 
           ./docs
           ./config
-          ./pdfs          
+          ./pdfs
+          ./html
         key: $build2-${{ env.cache-name }}-${{ github.event.head_commit.message }}
         restore-keys: |
           $build-${{ env.cache-name }}-${{ github.event.head_commit.message }}
@@ -76,6 +78,7 @@ jobs:
             ./docs
             ./config
             ./pdfs
+            ./html
           key: $build3-${{ env.cache-name }}-${{ github.event.head_commit.message }}
           restore-keys: |
             $build2-${{ env.cache-name }}-${{ github.event.head_commit.message }}
@@ -88,7 +91,7 @@ jobs:
       - name: install pandoc
         run: sudo apt-get update;sudo apt-get install texlive-latex-base texlive-latex-extra pandoc; npm install --global mermaid-filter
       - name: run pandoc
-        run: cd docs; for i in *.md ; do echo "$i" && pandoc --mathjax -F mermaid-filter -s $i -o ../pdfs/$i.pdf || true; pandoc --mathjax -F mermaid-filter -s $i -o ../html/$i.html || true; done 
+        run: cd docs; for i in *.md ; do echo "$i" && pandoc --mathjax -F mermaid-filter -s $i -o ../pdfs/$i.pdf || true; pandoc --self-contained --standalone --mathjax -F mermaid-filter -s $i -o ../html/$i.html --metadata pagetitle=$i || true; done 
       - name: list files2
         run: 'ls -laR'        
 
@@ -108,7 +111,7 @@ jobs:
             ./docs
             ./config
             ./pdfs
-            
+            ./html
           key: $build4-${{ env.cache-name }}-${{ github.event.head_commit.message }}
           restore-keys: |
             $build3-${{ env.cache-name }}-${{ github.event.head_commit.message }}
