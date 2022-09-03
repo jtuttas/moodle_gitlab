@@ -1,6 +1,6 @@
 # Moodle & Github/Gitlab
 Dieses Repository realisiert folgende Funktionalität:
-- Markdown Dateien (.md), die sich im Ordner **docs** befinden, werden via pandoc als pdf Dateien exportiert und finden sich dann im Ordner **pdfs** bzw. als html im Ordner **html**. Dazu muss sich im Ordner javascript die Datei *mathjax.js* befinden.
+- Markdown Dateien (.md), die sich im Ordner **docs** befinden, werden via pandoc als pdf Dateien exportiert und finden sich dann im Ordner **pdfs** bzw. als html im Ordner **html**. 
 
 - Draw.io Grafiken (.drawio) im Ordner **docs** werden gewandelt nach SVG und im Ordner **docs/images** abgelegt.
 - Umlet Dateien (.uxf) im Ordner **docs** werden gewandelt nach SVG und im Ordner **docs/images** abgelegt.
@@ -18,7 +18,7 @@ include:
   - bsp.md 
 ```
 
-- Markdown Dateien im Ordner **docs** werden ferner via *mkdocs* gerendert als html Dateien. Der Output erfolgt default mäßig in den Ordner **site**. Zur Konfiguration muss sich die Dateil **mkdocs.yml** im Wurzelverzeichnis des Repositories befinden. Minimal hat die Datei folgenden Inhalt:
+- Markdown Dateien im Ordner **docs** werden ferner via *mkdocs* gerendert als html Dateien. Der Output erfolgt default mäßig in den Ordner **site**. Zur Konfiguration muss sich die Dateil **mkdocs.yml** im Wurzelverzeichnis des Repositories befinden. Ferner muss sich im Ordner javascript die Datei *mathjax.js* befinden. Minimal hat die Datei folgenden Inhalt:
 
 ```yml
 site_name: MyTest

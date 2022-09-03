@@ -1,0 +1,63 @@
+<h1 id="beispiele">Beispiele!</h1>
+<h2 id="ein-bild-einfügen">Ein Bild einfügen</h2>
+<figure>
+<img src="./images/img.png" alt="bild" />
+<figcaption aria-hidden="true">bild</figcaption>
+</figure>
+<h2 id="plantuml-einfügen">PlantUML einfügen</h2>
+<figure>
+<img
+src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/jtuttas/moodle_gitlab/master/docs/Instance.puml"
+alt="Class Diagram" />
+<figcaption aria-hidden="true">Class Diagram</figcaption>
+</figure>
+<h2 id="code-einbauen">Code einbauen!!</h2>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">/**</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a> <span class="co">*</span> Main</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a> <span class="co">*/</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> Main <span class="op">{</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">static</span> <span class="dt">void</span> <span class="fu">main</span><span class="op">(</span><span class="bu">String</span><span class="op">[]</span> args<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Hallo Welt!&quot;</span><span class="op">);</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<h2 id="latex-formeln-verwenden">LaTex Formeln verwenden</h2>
+<table>
+<colgroup>
+<col style="width: 54%" />
+<col style="width: 45%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Beschreibung</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline"><em>A</em> ∼ <em>B</em></span> bedeutet
+<span class="math inline">|<em>A</em>| = |<em>B</em>|</span></td>
+<td>Äquivalenz von Mengen</td>
+</tr>
+<tr class="even">
+<td><span class="math inline"><em>A</em> = <em>B</em></span> bedeutet
+<span
+class="math inline"><em>x</em> ∈ <em>A</em> ↔︎ <em>x</em> ∈ <em>B</em></span></td>
+<td>Gleichheit von Mengen</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline"><em>A</em> ⊆ <em>B</em></span> bedeutet
+<span
+class="math inline"><em>x</em> ∈ <em>A</em> → <em>x</em> ∈ <em>B</em></span></td>
+<td>Differenzmenge</td>
+</tr>
+</tbody>
+</table>
+<h2 id="meramaid-grafiken-verwenden">Meramaid Grafiken verwenden</h2>
+<pre class="mermaid"><code>graph LR
+  A[Start] --&gt; B{Error?};
+  B --&gt;|Yes| C[Hmm...];
+  C --&gt; D[Debug];
+  D --&gt; B;
+  B ----&gt;|No| E[Yay!];</code></pre>
