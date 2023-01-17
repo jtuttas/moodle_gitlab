@@ -1,0 +1,30 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+Person <|-- Student
+Person <|-- Lehrer
+
+class Person {
+    - name: String
+    
+    
+    + Person(n:String)
+    + getName():String
+}
+
+class Student {
+    - matrnr: int
+
+    + Student(m:int,n:String)
+    + getMatrNr():int
+}
+
+class Lehrer {
+    - Kürzel: String
+
+    + Lehrert(k:String,n:String)
+    + getKürzel():String
+}
+
+
+@enduml
